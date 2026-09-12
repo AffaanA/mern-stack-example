@@ -2,7 +2,7 @@
 
 A full-stack CRUD application built with MongoDB, Express, React, and Node.js (MERN).
 
-Companion code for the [MERN Stack Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) and [video walkthrough](https://www.youtube.com/watch?v=4nKWREmCvsE).
+Companion code for the [MERN Stack Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) and [video walkthrough](https://www.youtube.com/watch?v=4nKWREmCvsE).
 
 [![CI](https://github.com/mongodb-developer/mern-stack-example/actions/workflows/main.yaml/badge.svg)](https://github.com/mongodb-developer/mern-stack-example/actions/workflows/main.yaml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -54,7 +54,7 @@ mern/
 
 - Node.js 20+
 - npm 9+
-- A free [MongoDB Atlas](https://www.mongodb.com/atlas?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) cluster
+- A free [MongoDB Atlas](https://www.mongodb.com/atlas?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) cluster
 
 ## Quick Start and MongoDB Setup
 
@@ -76,7 +76,7 @@ ATLAS_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/
 PORT=5050
 ```
 
-If you are new to Atlas, use the [Atlas quick start guide](https://www.mongodb.com/docs/atlas/getting-started/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) and then paste your connection string into `ATLAS_URI`.
+If you are new to Atlas, use the [Atlas quick start guide](https://www.mongodb.com/docs/atlas/getting-started/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) and then paste your connection string into `ATLAS_URI`.
 
 Optional: seed sample data:
 
@@ -134,10 +134,10 @@ Example request body for create or update:
 
 | Feature | Where |
 |---|---|
-| [MongoDB Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `mern/server/db/connection.js` |
-| [CRUD operations](https://www.mongodb.com/docs/manual/crud/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `mern/server/routes/record.js` |
-| [MongoDB Atlas](https://www.mongodb.com/atlas?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `ATLAS_URI` in `config.env` |
-| [Server API version](https://www.mongodb.com/docs/manual/reference/stable-api/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `ServerApiVersion.v1` in `connection.js` |
+| [MongoDB Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `mern/server/db/connection.js` |
+| [CRUD operations](https://www.mongodb.com/docs/manual/crud/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `mern/server/routes/record.js` |
+| [MongoDB Atlas](https://www.mongodb.com/atlas?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `ATLAS_URI` in `config.env` |
+| [Server API version](https://www.mongodb.com/docs/manual/reference/stable-api/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel) | `ServerApiVersion.v1` in `connection.js` |
 
 ## Troubleshooting
 
@@ -145,7 +145,7 @@ Example request body for create or update:
 
 - Verify `ATLAS_URI` in `mern/server/config.env`
 - Confirm your database user credentials are correct in `mern/server/config.env`
-- Confirm your IP is in [Atlas Network Access](https://www.mongodb.com/docs/atlas/security/ip-access-list/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel)
+- Confirm your IP is in [Atlas Network Access](https://www.mongodb.com/docs/atlas/security/ip-access-list/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel)
 
 ### Backend fails to start
 
@@ -170,9 +170,9 @@ Example request body for create or update:
 
 ## Additional Resources
 
-- [MERN Stack Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel)
-- [MongoDB Atlas Docs](https://www.mongodb.com/docs/atlas?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel)
-- [MongoDB Node.js Driver Docs](https://www.mongodb.com/docs/drivers/node/current/?utm_campaign=devrel&utm_medium=github&utm_content=mern.stack.example&utm_term=learning.fuel)
+- [MERN Stack Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel)
+- [MongoDB Atlas Docs](https://www.mongodb.com/docs/atlas?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel)
+- [MongoDB Node.js Driver Docs](https://www.mongodb.com/docs/drivers/node/current/?utm_campaign=devrel&utm_medium=referral&utm_source=github&utm_content=mern.stack.example&utm_term=learning.fuel)
 
 ## License
 
