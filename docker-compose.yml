@@ -1,0 +1,19 @@
+services:
+
+  backend:
+    build:
+      context: ./mern/server
+    container_name: mern-backend
+    env_file:
+      - ./mern/server/config.env
+    expose:
+      - "5050"
+
+  frontend:
+    build:
+      context: ./mern/client
+    container_name: mern-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
