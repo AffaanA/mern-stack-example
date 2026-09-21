@@ -41,7 +41,7 @@ pipeline {
     }
 }
 
-stage('Docker Push') {
+        stage('Docker Push') {
     steps {
         withCredentials([usernamePassword(
             credentialsId: 'dockerhub-creds',
@@ -59,5 +59,33 @@ stage('Docker Push') {
         }
     }
 }
+
+stage('Deploy') {
+    steps {
+        withCredentials([
+            string(
+                credentialsId: 'ansible-vault-password',
+                variable: 'VAULT_PASSWORD'
+            )
+        ]) {
+            sshagent(['jenkins-to-ansible']) {
+                sh '''
+                    set +x
+
+                    ssh -o StrictHostKeyChecking=no \
+                        ubuntu@172.31.16.151 \
+                        "printf '%s' '${VAULT_PASSWORD}' > /tmp/ansible-vault-password && \
+                         chmod 600 /tmp/ansible-vault-password && \
+                         cd ~/ansible-project && \
+                         ansible-playbook deploy.yml \
+                         --extra-vars 'image_tag=${BUILD_NUMBER}' \
+                         --vault-password-file /tmp/ansible-vault-password; \
+                         rm -f /tmp/ansible-vault-password"
+                '''
+            }
+        }
+    }
+}
+
     }
 }
