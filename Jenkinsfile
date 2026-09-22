@@ -72,15 +72,19 @@ stage('Deploy') {
                 sh '''
                     set +x
 
+                    trap 'ssh -o StrictHostKeyChecking=no ubuntu@10.0.1.223 "rm -f /tmp/ansible-vault-password"' EXIT
+
+                    printf '%s' "$VAULT_PASSWORD" | \
+                        ssh -o StrictHostKeyChecking=no \
+                        ubuntu@10.0.1.223 \
+                        'cat > /tmp/ansible-vault-password && chmod 600 /tmp/ansible-vault-password'
+
                     ssh -o StrictHostKeyChecking=no \
-                        ubuntu@172.31.16.151 \
-                        "printf '%s' '${VAULT_PASSWORD}' > /tmp/ansible-vault-password && \
-                         chmod 600 /tmp/ansible-vault-password && \
-                         cd ~/ansible-project && \
+                        ubuntu@10.0.1.223 \
+                        "cd ~/ansible-project && \
                          ansible-playbook deploy.yml \
-                         --extra-vars 'image_tag=${BUILD_NUMBER}' \
-                         --vault-password-file /tmp/ansible-vault-password; \
-                         rm -f /tmp/ansible-vault-password"
+                         --extra-vars image_tag=$BUILD_NUMBER \
+                         --vault-password-file /tmp/ansible-vault-password"
                 '''
             }
         }
